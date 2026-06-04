@@ -5,15 +5,9 @@ import { useState } from "react";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
+import { projects } from "@/lib/projects-data";
+
 const categories = ["All", "Real Estate", "FMCG", "Corporate", "Hospitality"];
-const projects = [
-  { id: 1, title: "Gokul Haridwar", category: "Real Estate", description: "Your Gateway to Serene Living. A premium real estate project nestled amidst nature's embrace.", image: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Team-8.jpg", tags: ["Branding", "Print", "Digital"] },
-  { id: 2, title: "The Park", category: "Real Estate", description: "Premier real estate project offering luxury living in a serene environment with world-class amenities.", image: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Testimonial-2.jpg", tags: ["Branding", "Marketing", "Website"] },
-  { id: 3, title: "Rajani Group", category: "Corporate", description: "Complete brand overhaul and digital presence for one of the region's leading business groups.", image: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Testimonial-3.jpg", tags: ["Identity", "Strategy", "SEO"] },
-  { id: 4, title: "Ganga Pipes", category: "Corporate", description: "Comprehensive branding and marketing strategy for a leading pipe manufacturing company.", image: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Team-8.jpg", tags: ["Branding", "Print", "Digital"] },
-  { id: 5, title: "Deepsy Food", category: "FMCG", description: "Brand identity, packaging design, and digital marketing for a fast-growing food brand.", image: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Testimonial-2.jpg", tags: ["Packaging", "Marketing", "Social"] },
-  { id: 6, title: "Vaishnawi Maritime", category: "Corporate", description: "Professional branding and marketing collateral for a maritime services company.", image: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Testimonial-3.jpg", tags: ["Identity", "Print", "Website"] },
-];
 
 export default function Portfolio() {
   const [active, setActive] = useState("All");
@@ -50,7 +44,7 @@ export default function Portfolio() {
         {/* Grid */}
         <div style={{ display: "grid", gap: "20px" }} className="sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((project, i) => (
-            <div key={project.id} style={{ borderRadius: "0", overflow: "hidden", background: "#fff", border: "1px solid rgba(0,0,0,0.07)", opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(24px)", transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s` }} className="card-hover group">
+            <Link key={project.id} href={`/projects/${project.slug}`} style={{ textDecoration: "none", color: "inherit", display: "block", borderRadius: "0", overflow: "hidden", background: "#fff", border: "1px solid rgba(0,0,0,0.07)", opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(24px)", transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s` }} className="card-hover group">
               <div style={{ position: "relative", height: "200px", overflow: "hidden" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={project.image} alt={project.title} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.5s ease" }} className="group-hover:scale-110" />
@@ -69,7 +63,7 @@ export default function Portfolio() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

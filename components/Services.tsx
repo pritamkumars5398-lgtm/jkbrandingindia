@@ -6,15 +6,15 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const services = [
-  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Service-1.png", title: "Graphic Designing", description: "Stunning visual content that brings your brand to life — logos, brochures, social media creatives, and more." },
-  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/social-media.png", title: "Digital Marketing", description: "Cost-effective brand awareness campaigns that connect you with your target audience across all digital platforms." },
-  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Service-3.png", title: "Website Development", description: "Responsive, user-centric websites that make lasting impressions and drive business growth." },
-  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/vector.png", title: "Search Engine Optimization", description: "Improve your website's visibility on Google, Bing and other search engines through proven SEO strategies." },
-  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Service-5.png", title: "Hoarding & Kiosk", description: "Eye-catching physical display advertising solutions that amplify your brand presence in the real world." },
-  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Service-6.png", title: "Exhibition Stall", description: "Showcase platforms designed for direct client engagement — making your brand the star of every event." },
-  { icon: "https://jkbrandingindia.com/wp-content/uploads/2025/01/camera.png", title: "Photo & Videography", description: "Transforming moments into timeless memories through stunning photography and cinematic videography." },
-  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/adwords.png", title: "Google Ads", description: "Targeted online advertising to acquire new customers and maximize your return on investment." },
-  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/magazine.png", title: "Magazine, Radio & Cinema Ads", description: "Multi-channel advertising for maximum brand reach and recall across print, radio and cinema." },
+  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Service-1.png", title: "Graphic Designing", description: "Stunning visual content that brings your brand to life — logos, brochures, social media creatives, and more.", href: "/services/graphic-designing" },
+  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/social-media.png", title: "Digital Marketing", description: "Cost-effective brand awareness campaigns that connect you with your target audience across all digital platforms.", href: "/services/digital-marketing" },
+  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Service-3.png", title: "Website Development", description: "Responsive, user-centric websites that make lasting impressions and drive business growth.", href: "/services/website-development" },
+  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/vector.png", title: "Search Engine Optimization", description: "Improve your website's visibility on Google, Bing and other search engines through proven SEO strategies.", href: "/services/search-engine-optimization" },
+  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Service-5.png", title: "Hoarding & Kiosk", description: "Eye-catching physical display advertising solutions that amplify your brand presence in the real world.", href: "/services/hoarding-kiosk" },
+  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/Service-6.png", title: "Exhibition Stall", description: "Showcase platforms designed for direct client engagement — making your brand the star of every event.", href: "/services/exhibition-stall" },
+  { icon: "https://jkbrandingindia.com/wp-content/uploads/2025/01/camera.png", title: "Photo & Videography", description: "Transforming moments into timeless memories through stunning photography and cinematic videography.", href: "/services/photo-videography" },
+  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/adwords.png", title: "Google Ads", description: "Targeted online advertising to acquire new customers and maximize your return on investment.", href: "/services/google-ads" },
+  { icon: "https://jkbrandingindia.com/wp-content/uploads/2024/10/magazine.png", title: "Magazine, Radio & Cinema Ads", description: "Multi-channel advertising for maximum brand reach and recall across print, radio and cinema.", href: "/services/magazine-radio-cinema-ads" },
 ];
 
 export default function Services() {
@@ -55,9 +55,11 @@ export default function Services() {
         {/* Grid */}
         <div style={{ display: "grid", gap: "20px" }} className="sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
-            <div
+            <Link
               key={service.title}
+              href={service.href}
               style={{
+                display: "block",
                 padding: "32px 28px",
                 borderRadius: "0",
                 background: "#fff",
@@ -66,6 +68,7 @@ export default function Services() {
                 opacity: inView ? 1 : 0,
                 transform: inView ? "translateY(0)" : "translateY(24px)",
                 transition: `opacity 0.5s ease ${(i % 3) * 0.1 + Math.floor(i / 3) * 0.1}s, transform 0.5s ease ${(i % 3) * 0.1 + Math.floor(i / 3) * 0.1}s`,
+                textDecoration: "none",
               }}
               className="card-hover group"
             >
@@ -101,7 +104,7 @@ export default function Services() {
               <span style={{ display: "inline-flex", alignItems: "center", gap: "4px", color: "#f58220", fontSize: "13px", fontWeight: 600, opacity: 0, transition: "opacity 0.2s" }} className="group-hover:opacity-100">
                 Read More <ArrowRight size={13} />
               </span>
-            </div>
+            </Link>
           ))}
         </div>
 

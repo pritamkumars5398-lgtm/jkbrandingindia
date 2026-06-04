@@ -19,13 +19,19 @@ const quickLinks = [
   { label: "Home", href: "/" }, { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" }, { label: "Projects", href: "/projects" },
   { label: "Blog", href: "/blog" }, { label: "Career", href: "/career" },
-  { label: "Contact", href: "/contact" }, { label: "Privacy Policy", href: "#privacy" },
+  { label: "Contact", href: "/contact" }, { label: "Privacy Policy", href: "/privacy" },
 ];
 
 const serviceLinks = [
-  "Graphic Designing", "Digital Marketing", "Website Development",
-  "Search Engine Optimization", "Hoarding & Kiosk", "Exhibition Stall",
-  "Photo & Videography", "Google Ads", "Magazine, Radio & Cinema Ads",
+  { label: "Graphic Designing", href: "/services/graphic-designing" },
+  { label: "Digital Marketing", href: "/services/digital-marketing" },
+  { label: "Website Development", href: "/services/website-development" },
+  { label: "Search Engine Optimization", href: "/services/search-engine-optimization" },
+  { label: "Hoarding & Kiosk", href: "/services/hoarding-kiosk" },
+  { label: "Exhibition Stall", href: "/services/exhibition-stall" },
+  { label: "Photo & Videography", href: "/services/photo-videography" },
+  { label: "Google Ads", href: "/services/google-ads" },
+  { label: "Magazine, Radio & Cinema Ads", href: "/services/magazine-radio-cinema-ads" },
 ];
 
 export default function Footer() {
@@ -107,10 +113,10 @@ export default function Footer() {
               <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "20px" }}>Our Services</h4>
               <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                 {serviceLinks.map((s) => (
-                  <li key={s}>
-                    <Link href="/services" style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", display: "flex", alignItems: "center", gap: "6px", transition: "color 0.2s" }} className="hover:text-[#f58220] group">
+                  <li key={s.label}>
+                    <Link href={s.href} style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", display: "flex", alignItems: "center", gap: "6px", transition: "color 0.2s" }} className="hover:text-[#f58220] group">
                       <ArrowRight size={11} style={{ opacity: 0, transition: "opacity 0.2s" }} className="group-hover:opacity-100" />
-                      {s}
+                      {s.label}
                     </Link>
                   </li>
                 ))}

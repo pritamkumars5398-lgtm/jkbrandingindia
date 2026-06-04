@@ -27,10 +27,13 @@ export default function Navbar() {
   const isDarkHero = DARK_HERO_ROUTES.some(r => pathname.startsWith(r));
 
   useEffect(() => {
-    setScrolled(window.scrollY > 40);
     const handler = () => setScrolled(window.scrollY > 40);
+    const id = requestAnimationFrame(handler);
     window.addEventListener("scroll", handler, { passive: true });
-    return () => window.removeEventListener("scroll", handler);
+    return () => {
+      cancelAnimationFrame(id);
+      window.removeEventListener("scroll", handler);
+    };
   }, []);
 
   // Transparent state text colours:

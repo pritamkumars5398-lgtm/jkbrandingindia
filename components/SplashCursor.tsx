@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck  — WebGL fluid sim; TS strict mode conflicts with raw GL types
 "use client";
 import { useEffect, useRef } from "react";
@@ -418,8 +419,8 @@ export default function SplashCursor({
     let velocity = createDoubleFBO(simRes.w, simRes.h, fmtRG.internalFormat, fmtRG.format, half, filter);
     let dye      = createDoubleFBO(dyeRes.w, dyeRes.h, fmt.internalFormat,   fmt.format,   half, filter);
     let pressure = createDoubleFBO(simRes.w, simRes.h, fmtR.internalFormat,  fmtR.format,  half, g.NEAREST);
-    let divergence = createFBO(simRes.w, simRes.h, fmtR.internalFormat, fmtR.format, half, g.NEAREST);
-    let curl       = createFBO(simRes.w, simRes.h, fmtR.internalFormat, fmtR.format, half, g.NEAREST);
+    const divergence = createFBO(simRes.w, simRes.h, fmtR.internalFormat, fmtR.format, half, g.NEAREST);
+    const curl       = createFBO(simRes.w, simRes.h, fmtR.internalFormat, fmtR.format, half, g.NEAREST);
 
     // ── Resize canvas & FBOs on window resize ──────────────────────────
     function resize() {
