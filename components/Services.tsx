@@ -93,15 +93,15 @@ export default function Services() {
                 <Image src={`${service.img}?w=640&q=70`} alt={service.title} fill unoptimized sizes="(max-width: 640px) 100vw, 380px" style={{ objectFit: "cover", transition: "transform 0.5s ease" }} className="group-hover:scale-110" />
               </div>
 
-              <div style={{ padding: "26px 28px 28px" }}>
+              <div style={{ padding: "26px 28px 28px", display: "flex", flexDirection: "column", flex: 1 }}>
                 <h3 style={{ fontSize: "16px", fontWeight: 700, color: "#1a1a1a", marginBottom: "10px", transition: "color 0.2s" }} className="group-hover:text-[#f58220]">
                   {service.title}
                 </h3>
-                <p style={{ color: "#888", fontSize: "13.5px", lineHeight: 1.7, marginBottom: "18px" }}>
+                <p style={{ color: "#888", fontSize: "13.5px", lineHeight: 1.7, marginBottom: "18px", flex: 1 }}>
                   {service.description}
                 </p>
 
-                <span style={{ display: "inline-flex", alignItems: "center", gap: "4px", color: "#f58220", fontSize: "13px", fontWeight: 600, opacity: 0, transition: "opacity 0.2s" }} className="group-hover:opacity-100">
+                <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", padding: "9px 20px", background: "#f58220", color: "#fff", fontWeight: 700, fontSize: "13px", borderRadius: "999px", alignSelf: "flex-start", transition: "background 0.2s" }} className="group-hover:bg-[#ff933c]">
                   Read More <ArrowRight size={13} />
                 </span>
               </div>
