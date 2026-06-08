@@ -288,7 +288,7 @@ export default function Hero() {
             >
               <Star size={14} style={{ color: "#f58220" }} fill="#f58220" />
               <span style={{ color: "#d66b10", fontSize: "13px", fontWeight: 600 }}>
-                17+ Years of Excellence in Branding
+                10+ Years of Excellence in Branding
               </span>
             </div>
 

@@ -101,7 +101,7 @@ export default function Footer() {
             <div>
               <Image src="/brandingo-logo-v2.png" alt="Brandingo" width={180} height={45} style={{ height: "40px", width: "auto", objectFit: "contain", marginBottom: "16px", filter: "brightness(0) invert(1)" }} />
               <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", lineHeight: 1.75, marginBottom: "20px" }}>
-                Brandingo India Pvt. Ltd. — 17+ years of expertise in branding, designing, and marketing. Making every customer feel WoW.
+                Brandingo India Pvt. Ltd. — 10+ years of expertise in branding, designing, and marketing. Making every customer feel WoW.
               </p>
               <div style={{ display: "flex", gap: "10px" }}>
                 {[SocialFacebook, SocialLinkedin, SocialInstagram, SocialYoutube].map((Icon, i) => (
