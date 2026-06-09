@@ -6,7 +6,7 @@ import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
 const highlights = [
-  "17+ Years of Experience in Designing, Printing & Brand Development",
+  "10+ Years of Experience in Designing, Printing & Brand Development",
   "Founded by Sakariya Brothers — Saral & Bhavesh",
   "Objective: Make Every Customer Feel WoW",
   "Global Vision with Local Expertise",
@@ -36,7 +36,7 @@ export default function About() {
                 />
               </div>
               <div style={{ position:"absolute", bottom:"-20px", right:"-20px", background:"#f58220", borderRadius:"0", padding:"18px 22px", textAlign:"center" }}>
-                <div style={{ fontSize:"2rem", fontWeight:900, color:"#fff", lineHeight:1 }}>17+</div>
+                <div style={{ fontSize:"2rem", fontWeight:900, color:"#fff", lineHeight:1 }}>10+</div>
                 <div style={{ fontSize:"11px", fontWeight:700, color:"#fff", textTransform:"uppercase", letterSpacing:"0.05em", marginTop:"2px" }}>Years Experience</div>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function About() {
               Crafting Your Vision, <span style={{ color:"#f58220" }}>Building Your Success</span>
             </h2>
             <p style={{ color:"#555", fontSize:"1rem", lineHeight:1.8, marginBottom:"16px" }}>
-              Brandingo India Pvt. Ltd. was established by the Sakariya Brothers — Saral and Bhavesh. With 17+ years of expertise in Designing, Printing, and Brand Development, we transform businesses into unforgettable brands.
+              Brandingo India Pvt. Ltd. was established by the Sakariya Brothers — Saral and Bhavesh. With 10+ years of expertise in Designing, Printing, and Brand Development, we transform businesses into unforgettable brands.
             </p>
             <p style={{ color:"#777", lineHeight:1.8, marginBottom:"28px", fontSize:"0.95rem" }}>
               Our objective is simple yet powerful: make every customer feel WoW. We blend strategic thinking with creative execution to deliver branding solutions that truly resonate with your audience.

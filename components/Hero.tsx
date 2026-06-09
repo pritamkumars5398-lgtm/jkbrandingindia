@@ -288,7 +288,7 @@ export default function Hero() {
             >
               <Star size={14} style={{ color: "#f58220" }} fill="#f58220" />
               <span style={{ color: "#d66b10", fontSize: "13px", fontWeight: 600 }}>
-                17+ Years of Excellence in Branding
+                10+ Years of Excellence in Branding
               </span>
             </div>
 
@@ -371,14 +371,14 @@ export default function Hero() {
             </div>
 
             {/* Stats row */}
-            <div style={{ display: "flex", flexWrap: "nowrap", justifyContent: "space-between", gap: "clamp(10px, 3vw, 24px)" }}>
-  {[{ value: "10+", label: "Years Experience" },{ value: "40,000+", label: "Projects Completed" },{ value: "35,000+", label: "Happy Clients" }].map((s) => (
-    <div key={s.label} style={{ borderLeft: "3px solid #f58220", paddingLeft: "clamp(8px, 2vw, 14px)", flex: "1 1 0", minWidth: 0 }}>
-      <div style={{ fontSize: "clamp(1.3rem, 6vw, 2rem)", fontWeight: 800, color: "#1a1a1a", whiteSpace: "nowrap" }}>{s.value}</div>
-      <div style={{ fontSize: "clamp(10px, 2.6vw, 12px)", color: "#888", marginTop: "2px", fontWeight: 500 }}>{s.label}</div>
-    </div>
-  ))}
-</div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
+              {[{ value: "10+", label: "Years Experience" }, { value: "40,000+", label: "Projects Completed" }, { value: "35,000+", label: "Happy Clients" }].map((s) => (
+                <div key={s.label} style={{ borderLeft: "3px solid #f58220", paddingLeft: "12px", minWidth: 0 }}>
+                  <div style={{ fontSize: "clamp(1.2rem, 4vw, 2rem)", fontWeight: 800, color: "#1a1a1a", lineHeight: 1.1, whiteSpace: "nowrap" }}>{s.value}</div>
+                  <div style={{ fontSize: "clamp(10px, 2.5vw, 12px)", color: "#888", marginTop: "2px", fontWeight: 500 }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

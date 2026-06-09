@@ -26,7 +26,7 @@ export default function Portfolio() {
   const filtered = active === "All" ? projects : projects.filter(p => p.category === active);
 
   return (
-    <section id="projects" ref={ref} style={{ padding: "100px 0", background: "#f9fafb" }}>
+    <section id="projects" ref={ref} style={{ padding: "100px 0", background: "#f9fafb", overflow: "hidden" }}>
       <div className="site-wrap">
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "48px", opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}>

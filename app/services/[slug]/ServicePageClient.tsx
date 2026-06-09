@@ -93,7 +93,7 @@ function GraphicDesigning() {
                 Design that drives <span style={{ color: A }}>recognition</span> and results
               </h2>
               <p style={{ color: "#666", lineHeight: 1.8, marginBottom: "16px" }}>
-                Great design is the foundation of every strong brand. Our team of senior graphic designers brings 17+ years of collective experience to every project — from brand-new identity systems to revitalising established brands.
+                Great design is the foundation of every strong brand. Our team of senior graphic designers brings 10+ years of collective experience to every project — from brand-new identity systems to revitalising established brands.
               </p>
               <p style={{ color: "#666", lineHeight: 1.8, marginBottom: "28px" }}>
                 We believe design should solve problems, not just look pretty. Every creative decision we make is intentional and aligned with your business objectives.
@@ -105,7 +105,7 @@ function GraphicDesigning() {
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-              {[{ v: "500+", l: "Projects Delivered" }, { v: "17+", l: "Years of Expertise" }, { v: "100%", l: "Client Satisfaction" }, { v: "48h", l: "Avg First Draft" }].map(s => (
+              {[{ v: "500+", l: "Projects Delivered" }, { v: "10+", l: "Years of Expertise" }, { v: "100%", l: "Client Satisfaction" }, { v: "48h", l: "Avg First Draft" }].map(s => (
                 <div key={s.l} style={{ padding: "28px 20px", border: "1px solid rgba(0,0,0,0.07)", textAlign: "center", background: "#fafafa" }}>
                   <div style={{ fontSize: "2rem", fontWeight: 900, color: A }}>{s.v}</div>
                   <div style={{ color: "#888", fontSize: "13px", marginTop: "4px" }}>{s.l}</div>
