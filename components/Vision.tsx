@@ -15,7 +15,7 @@ export default function Vision() {
   return (
     <section
       ref={ref}
-      style={{ padding: "80px 0", background: "#f0f6fa", borderTop: "1px solid rgba(11,60,93,0.1)", borderBottom: "1px solid rgba(11,60,93,0.1)" }}
+      style={{ padding: "80px 0", background: "#f0f6fa", overflow: "hidden", borderTop: "1px solid rgba(11,60,93,0.1)", borderBottom: "1px solid rgba(11,60,93,0.1)" }}
     >
       <div className="site-wrap">
         <div style={{ display: "grid", gap: "32px" }} className="md:grid-cols-3">
