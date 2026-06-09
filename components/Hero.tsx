@@ -152,7 +152,7 @@ export default function Hero() {
         <circle cx="150" cy="750" r="500" fill="none" stroke="url(#strokeGrad)" strokeWidth="1.5" />
         <circle cx="150" cy="750" r="350" fill="url(#circleGrad1)" stroke="url(#strokeGrad)" strokeWidth="1" />
         <circle cx="150" cy="750" r="220" fill="none" stroke="url(#strokeGrad)" strokeWidth="0.75" />
-        
+
         {/* Large overlapping circle on right side background */}
         <circle cx="1200" cy="380" r="600" fill="none" stroke="url(#strokeGrad)" strokeWidth="1.5" />
         <circle cx="1200" cy="380" r="440" fill="url(#circleGrad2)" stroke="url(#strokeGrad)" strokeWidth="1" />
@@ -327,7 +327,7 @@ export default function Hero() {
             </h1>
 
             <p style={{ color: "#666", fontSize: "1.1rem", lineHeight: 1.75, marginBottom: "36px", maxWidth: "520px" }}>
-              Build Your Brand&apos;s Journey with Brandingo — your partner in
+              Build Your Brand&apos;s Journey with Barndingo — your partner in
               Logo, Packaging, Brochure &amp; all things graphic design.
             </p>
 
@@ -371,11 +371,14 @@ export default function Hero() {
             </div>
 
             {/* Stats row */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
-              {[{ value: "10+", label: "Years Experience" }, { value: "40,000+", label: "Projects Completed" }, { value: "35,000+", label: "Happy Clients" }].map((s) => (
-                <div key={s.label} style={{ borderLeft: "3px solid #f58220", paddingLeft: "12px", minWidth: 0 }}>
-                  <div style={{ fontSize: "clamp(1.2rem, 4vw, 2rem)", fontWeight: 800, color: "#1a1a1a", lineHeight: 1.1, whiteSpace: "nowrap" }}>{s.value}</div>
-                  <div style={{ fontSize: "clamp(10px, 2.5vw, 12px)", color: "#888", marginTop: "2px", fontWeight: 500 }}>{s.label}</div>
+            <div
+              style={{ display: "grid", gap: "12px", maxWidth: "560px" }}
+              className="grid-cols-2 sm:grid-cols-4"
+            >
+              {[{ value: "40,000+", label: "Projects Completed" }, { value: "35,000+", label: "Happy Clients" }, { value: "10+", label: "Years Experience" }, { value: "50+", label: "Awards Won" }].map((s) => (
+                <div key={s.label} style={{ borderLeft: "2px solid #f58220", paddingLeft: "10px", minWidth: 0 }}>
+                  <div style={{ fontSize: "clamp(1rem, 3vw, 1.55rem)", fontWeight: 800, color: "#1a1a1a", lineHeight: 1.1, whiteSpace: "nowrap" }}>{s.value}</div>
+                  <div style={{ fontSize: "clamp(10px, 2vw, 11px)", color: "#888", marginTop: "3px", fontWeight: 500 }}>{s.label}</div>
                 </div>
               ))}
             </div>

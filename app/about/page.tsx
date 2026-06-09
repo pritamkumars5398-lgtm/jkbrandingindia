@@ -4,8 +4,9 @@ import Footer from "@/components/Footer";
 import About from "@/components/About";
 
 export const metadata: Metadata = {
-  title: "About Us | Brandingo India Pvt. Ltd.",
-  description: "Learn more about Brandingo India, a leading branding, printing, and digital marketing agency with over 10 years of experience.",
+  title: "About Us | Brandingo",
+  description:
+    "Learn more about Brandingo, a leading branding, printing, and digital marketing agency with over 10 years of experience.",
   alternates: {
     canonical: "https://jkbrandingindia.com/about",
   },

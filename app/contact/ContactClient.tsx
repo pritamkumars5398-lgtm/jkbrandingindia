@@ -8,9 +8,8 @@ import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Send, ChevronRight } from "lucide-react";
 
 const branches = [
-  { label: "Main Branch", city: "Rajkot", address: "Office No. 1104, Wings Business Bay, Nr ITC Fortune Hotel, 150 ft. Ring Road, Mavdi, Rajkot – 360004, Gujarat.", phone: "+91 9104963161" },
-  { label: "Jamnagar Branch", city: "Jamnagar", address: "Royal Empire, F.F.-2, Nr Avadh Honda Showroom, Ranjit Sagar Road, Jamnagar – 361005, Gujarat.", phone: "+91 93133 72525" },
-  { label: "Ahmedabad Branch", city: "Ahmedabad", address: "Office 1102, Shivam Trade Center (STC), Beside One World West, Bopal Approach, Nr S.P. Ring Road, Bopal, Ahmedabad 380058.", phone: "+91 95864 99001" },
+  { label: "Head Office", city: "Ahmedabad", address: "607, Iconic Shyamal, Shyamal Cross Roads, 132 Feet Ring Rd, Shyamal, Ahmedabad, Gujarat 380015", phone: "+91 98750 84098" },
+  { label: "Banglore Branch", city: "Bengaluru", address: "Shanti Apartments, Behind Indian Bike Showroom, Bhaskaran Rd,  Bengaluru, Karnataka 560042" },
 ];
 
 const SocialFacebook = () => <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>;
@@ -50,7 +49,7 @@ export default function ContactClient() {
       <section style={{ background: "#f8f9fb", padding: "72px 0" }}>
         <div className="site-wrap">
           <div style={{ display: "grid", gap: "20px", marginBottom: "20px" }} className="sm:grid-cols-2">
-            {[{ icon: Phone, label: "Phone", value: "+91 91049 63161", href: "tel:+919104963161" }, { icon: Mail, label: "Email", value: "info@brandingoindia.com", href: "mailto:info@brandingoindia.com" }].map(({ icon: Icon, label, value, href }) => (
+            {[{ icon: Phone, label: "Phone", value: "+91 98750 84098", href: "tel:+919875084098" }, { icon: Mail, label: "Email", value: "sales@brandingo.in", href: "mailto:sales@brandingo.in" }].map(({ icon: Icon, label, value, href }) => (
               <a key={label} href={href} style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px", padding: "36px 24px", background: "#fff", border: "1px solid rgba(0,0,0,0.07)", textDecoration: "none", transition: "border-color 0.2s", textAlign: "center" }} className="hover:border-[#f58220]/50 card-hover">
                 <div style={{ width: "52px", height: "52px", borderRadius: "50%", background: "#fff5eb", display: "flex", alignItems: "center", justifyContent: "center" }}><Icon size={22} style={{ color: "#f58220" }} /></div>
                 <div>

@@ -21,6 +21,7 @@ const SocialYoutube = () => (
 const quickLinks = [
   { label: "Home", href: "/" }, { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog" }, { label: "Career", href: "/career" },
   { label: "Contact", href: "/contact" }, { label: "Privacy Policy", href: "/privacy" },
 ];
@@ -37,7 +38,6 @@ const serviceLinks = [
 ];
 
 export default function Footer() {
-  // Word-by-word entrance for the CTA headline + subtext (replays on scroll-in)
   const { ref: ctaRef, inView: ctaInView } = useInView({ threshold: 0.3, triggerOnce: false });
   const wordIn = (i: number): React.CSSProperties => ({
     display: "inline-block",
@@ -51,10 +51,7 @@ export default function Footer() {
 
   return (
     <footer style={{ background: "#fff" }}>
-
-      {/* CTA Banner */}
       <div ref={ctaRef} style={{ background: "#f58220", position: "relative", overflow: "hidden" }}>
-        {/* Diagonal stripe pattern */}
         <div style={{ position: "absolute", inset: 0, backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(0,0,0,0.04) 30px, rgba(0,0,0,0.04) 31px)", pointerEvents: "none" }} />
         <div className="site-wrap" style={{ position: "relative", zIndex: 1, padding: "48px 24px", display: "flex", flexDirection: "column", gap: "20px", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ textAlign: "center" }}>
@@ -91,16 +88,13 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main footer body */}
       <div style={{ background: "#1a1a1a" }}>
         <div className="site-wrap" style={{ padding: "64px 24px" }}>
           <div style={{ display: "grid", gap: "40px" }} className="md:grid-cols-2 lg:grid-cols-4">
-
-            {/* Col 1 */}
             <div>
               <Image src="/brandingo-logo-v2.png" alt="Brandingo" width={180} height={45} style={{ height: "40px", width: "auto", objectFit: "contain", marginBottom: "16px", filter: "brightness(0) invert(1)" }} />
               <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", lineHeight: 1.75, marginBottom: "20px" }}>
-                Brandingo India Pvt. Ltd. — 10+ years of expertise in branding, designing, and marketing. Making every customer feel WoW.
+                Brandingo - 10+ years of expertise in branding, designing, and marketing. Making every customer feel WoW.
               </p>
               <div style={{ display: "flex", gap: "10px" }}>
                 {[SocialFacebook, SocialLinkedin, SocialInstagram, SocialYoutube].map((Icon, i) => (
@@ -111,7 +105,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Col 2 */}
             <div>
               <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "20px" }}>Quick Links</h4>
               <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -126,7 +119,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Col 3 */}
             <div>
               <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "20px" }}>Our Services</h4>
               <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -141,7 +133,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Col 4 */}
             <div>
               <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "20px" }}>Contact Us</h4>
               <ul style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -152,19 +143,19 @@ export default function Footer() {
                   </span>
                 </li>
                 <li>
-                  <a href="tel:+919104963161" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.4)", fontSize: "13px", transition: "color 0.2s" }} className="hover:text-[#f58220]">
-                    <Phone size={14} style={{ color: "#f58220" }} /> +91 91049 63161
+                  <a href="tel:+91 98750 84098" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.4)", fontSize: "13px", transition: "color 0.2s" }} className="hover:text-[#f58220]">
+                    <Phone size={14} style={{ color: "#f58220" }} /> +91 98750 84098
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@brandingoindia.com" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.4)", fontSize: "13px", transition: "color 0.2s" }} className="hover:text-[#f58220]">
-                    <Mail size={14} style={{ color: "#f58220" }} /> info@brandingoindia.com
+                  <a href="mailto:sales@brandingo.in" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.4)", fontSize: "13px", transition: "color 0.2s" }} className="hover:text-[#f58220]">
+                    <Mail size={14} style={{ color: "#f58220" }} /> sales@brandingo.in
                   </a>
                 </li>
               </ul>
               <div style={{ marginTop: "20px", paddingTop: "16px", borderTop: "1px solid rgba(255,255,255,0.07)" }}>
                 <p style={{ color: "rgba(255,255,255,0.2)", fontSize: "11px", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px" }}>Also In</p>
-                {["Jamnagar", "Ahmedabad"].map((c) => (
+                {["Banglore", "Ahmedabad"].map((c) => (
                   <div key={c} style={{ display: "flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.35)", fontSize: "13px", marginBottom: "6px" }}>
                     <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#f58220", flexShrink: 0 }} /> {c}
                   </div>
@@ -174,15 +165,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         {/* <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
           <div className="site-wrap" style={{ padding: "18px 24px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "8px" }}>
             <p style={{ color: "rgba(255,255,255,0.22)", fontSize: "12px" }}>
               Copyright 2024 © All Right Reserved Design by{" "}
-              <span style={{ color: "rgba(255,255,255,0.4)", fontWeight: 600 }}>Brandingo (India) Pvt. Ltd.</span>
+              <span style={{ color: "rgba(255,255,255,0.4)", fontWeight: 600 }}>Brandingo</span>
             </p>
             <p style={{ color: "rgba(255,255,255,0.22)", fontSize: "12px" }}>
-              Powered by <span style={{ color: "#f58220", fontWeight: 600 }}>Brandingo (India) Pvt. Ltd.</span>
+              Powered by <span style={{ color: "#f58220", fontWeight: 600 }}>Brandingo</span>
             </p>
           </div>
         </div> */}

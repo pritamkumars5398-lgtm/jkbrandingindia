@@ -6,14 +6,15 @@ import { useInView } from "react-intersection-observer";
 import { ArrowRight } from "lucide-react";
 
 const services = [
-  { img: "https://images.unsplash.com/photo-1626785774573-4b799315345d", title: "Logo Design", href: "/services/graphic-designing", desc: "A professional, well-designed logo is the crucial first step in establishing your brand — it creates the first impression of your company and expresses its values all in one." },
-  { img: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740", title: "Stationery Design", href: "/services/graphic-designing", desc: "Letterheads, envelopes, folders, business cards, invoices and more — well-executed stationery boosts your corporate identity and sets the tone from the very first touch." },
-  { img: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e", title: "Banner & Standee Design", href: "/services/graphic-designing", desc: "One of the most popular ways to market today. Portable stands — fixed, X-style, expandable or retractable — work in any size for any placement and visibility." },
-  { img: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da", title: "Packaging & Label Design", href: "/services/graphic-designing", desc: "The exterior wrap of your product and your first physical interaction with the public — packaging and labels that convey your brand's identity, quality and reputation." },
-  { img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0", title: "Menu Design", href: "/services/graphic-designing", desc: "Menus that express your eatery's personality, help customers understand your concept and promote profitability — key to any restaurant's marketing plan." },
-  { img: "https://images.unsplash.com/photo-1481277542470-605612bd2d61", title: "Invitation Card Design", href: "/services/graphic-designing", desc: "Beautifully crafted invitation cards for weddings, events and celebrations — designed to set the tone and make a memorable first impression." },
-  { img: "https://images.unsplash.com/photo-1452860606245-08befc0ff44b", title: "Tag Design", href: "/services/graphic-designing", desc: "Custom tags that carry your brand — from price and care tags to gift and product tags — designed for clarity, character and a premium feel." },
-  { img: "https://images.unsplash.com/photo-1542435503-956c469947f6", title: "Brochure Design", href: "/services/graphic-designing", desc: "Brochures extend your customers' knowledge of your business — introducing your company and giving a snapshot of your products, services, features and contact information." },
+  { img: "/Stationary Design/Logo/001.jpeg", title: "Logo Design", href: "/services/graphic-designing", desc: "A professional, well-designed logo is the crucial first step in establishing your brand — it creates the first impression of your company and expresses its values all in one." },
+  { img: "/Stationary Design/Stationary Design/002.jpeg", title: "Stationery Design", href: "/services/graphic-designing", desc: "Letterheads, envelopes, folders, business cards, invoices and more — well-executed stationery boosts your corporate identity and sets the tone from the very first touch." },
+  { img: "/Stationary Design/banner design/Banner2.jpeg", title: "Banner & Standee Design", href: "/services/graphic-designing", desc: "One of the most popular ways to market today. Portable stands — fixed, X-style, expandable or retractable — work in any size for any placement and visibility." },
+  { img: "/Stationary Design/packaging/11.jpg", title: "Packaging & Label Design", href: "/services/graphic-designing", desc: "The exterior wrap of your product and your first physical interaction with the public — packaging and labels that convey your brand's identity, quality and reputation." },
+  { img: "/Stationary Design/menu/007.jpeg", title: "Menu Design", href: "/services/graphic-designing", desc: "Menus that express your eatery's personality, help customers understand your concept and promote profitability — key to any restaurant's marketing plan." },
+  { img: "/Stationary Design/invtations/00b00e3b-0acd-4b3b-9af0-8c57be93ebbd.jpg", title: "Invitation Card Design", href: "/services/graphic-designing", desc: "Beautifully crafted invitation cards for weddings, events and celebrations — designed to set the tone and make a memorable first impression." },
+  { img: "/Stationary Design/tag design/a05665c2-b65d-4329-8476-5212f02a5f1b.jpg", title: "Tag Design", href: "/services/graphic-designing", desc: "Custom tags that carry your brand — from price and care tags to gift and product tags — designed for clarity, character and a premium feel." },
+  { img: "/Stationary Design/Brouchers & File/002.jpeg", title: "Brochure Design", href: "/services/graphic-designing", desc: "Brochures extend your customers' knowledge of your business — introducing your company and giving a snapshot of your products, services, features and contact information." },
+  { img: "/Stationary Design/Bag Design/8b2908ab-45cc-4945-aa89-3eca9f541d5e.jpg", title: "Bag Design", href: "/services/graphic-designing", desc: "Custom-designed bags that carry your brand wherever your customers go — a walking billboard that keeps your identity visible long after the sale." },
 ];
 
 export default function AllServices() {
@@ -55,7 +56,7 @@ export default function AllServices() {
               className="card-hover group"
             >
               <div style={{ position: "relative", width: "100%", height: "190px", overflow: "hidden" }}>
-                <Image src={`${s.img}?w=640&q=70`} alt={s.title} fill unoptimized sizes="(max-width: 640px) 100vw, 380px" style={{ objectFit: "cover", transition: "transform 0.5s ease" }} className="group-hover:scale-110" />
+                <Image src={s.img} alt={s.title} fill sizes="(max-width: 640px) 100vw, 380px" style={{ objectFit: "cover", transition: "transform 0.5s ease" }} className="group-hover:scale-110" />
               </div>
               <div style={{ padding: "24px 26px 28px", display: "flex", flexDirection: "column", flex: 1 }}>
                 <h3 style={{ fontWeight: 700, color: "#1a1a1a", fontSize: "16px", marginBottom: "8px" }} className="group-hover:text-[#f58220]">{s.title}</h3>

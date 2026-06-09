@@ -7,12 +7,13 @@ import { ArrowRight } from "lucide-react";
 
 // A 6-item highlight of our design services (full list lives on /services).
 const services = [
-  { img: "https://images.unsplash.com/photo-1626785774573-4b799315345d", title: "Logo Design", href: "/services/graphic-designing", description: "A professional logo is the first step in establishing your brand — a memorable first impression that captures your company's values." },
-  { img: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740", title: "Stationery Design", href: "/services/graphic-designing", description: "Letterheads, business cards, envelopes and more — cohesive stationery that strengthens your corporate identity." },
-  { img: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e", title: "Banner & Standee Design", href: "/services/graphic-designing", description: "Portable, high-impact stands — fixed, X-style, expandable or retractable — that work at any size for any placement." },
-  { img: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da", title: "Packaging & Label Design", href: "/services/graphic-designing", description: "Standout packaging and labels — your first physical touchpoint — that convey your brand's identity and quality." },
-  { img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0", title: "Menu Design", href: "/services/graphic-designing", description: "Menus that express your eatery's personality, help customers grasp your concept and drive profitability." },
-  { img: "https://images.unsplash.com/photo-1542435503-956c469947f6", title: "Brochure Design", href: "/services/graphic-designing", description: "Introduce your company and showcase your products, services and key features in a beautifully designed brochure." },
+  { img: "/Stationary Design/Logo/00001.jpeg", title: "Logo Design", href: "/services/graphic-designing", description: "A professional logo is the first step in establishing your brand — a memorable first impression that captures your company's values." },
+  { img: "/Stationary Design/Stationary Design/001.jpeg", title: "Stationery Design", href: "/services/graphic-designing", description: "Letterheads, business cards, envelopes and more — cohesive stationery that strengthens your corporate identity." },
+  { img: "/Stationary Design/banner design/Banner1.jpeg", title: "Banner & Standee Design", href: "/services/graphic-designing", description: "Portable, high-impact stands — fixed, X-style, expandable or retractable — that work at any size for any placement." },
+  { img: "/Stationary Design/packaging/10.jpeg", title: "Packaging & Label Design", href: "/services/graphic-designing", description: "Standout packaging and labels — your first physical touchpoint — that convey your brand's identity and quality." },
+  { img: "/Stationary Design/menu/006.jpeg", title: "Menu Design", href: "/services/graphic-designing", description: "Menus that express your eatery's personality, help customers grasp your concept and drive profitability." },
+  { img: "/Stationary Design/Brouchers & File/001.jpg", title: "Brochure Design", href: "/services/graphic-designing", description: "Introduce your company and showcase your products, services and key features in a beautifully designed brochure." },
+  { img: "/Stationary Design/Bag Design/7d397ec4-01c4-416e-9a8a-8c96da387090.jpg", title: "Bag Design", href: "/services/graphic-designing", description: "Custom-designed bags that carry your brand wherever your customers go — a walking advertisement for your business." },
 ];
 
 // Each card flies in from a different spot, then settles into the grid.
@@ -26,6 +27,7 @@ const cardEntrance = [
   "translate(0, 300px) rotate(-4deg) scale(0.7)",
   "translate(260px, -40px) rotate(12deg) scale(0.75)",
   "translate(-220px, 140px) rotate(-14deg) scale(0.75)",
+  "translate(0, 260px) rotate(4deg) scale(0.7)",
 ];
 
 export default function Services() {
@@ -90,7 +92,7 @@ export default function Services() {
 
               {/* Image */}
               <div style={{ position: "relative", width: "100%", height: "200px", overflow: "hidden" }}>
-                <Image src={`${service.img}?w=640&q=70`} alt={service.title} fill unoptimized sizes="(max-width: 640px) 100vw, 380px" style={{ objectFit: "cover", transition: "transform 0.5s ease" }} className="group-hover:scale-110" />
+                <Image src={service.img} alt={service.title} fill sizes="(max-width: 640px) 100vw, 380px" style={{ objectFit: "cover", transition: "transform 0.5s ease" }} className="group-hover:scale-110" />
               </div>
 
               <div style={{ padding: "26px 28px 28px", display: "flex", flexDirection: "column", flex: 1 }}>

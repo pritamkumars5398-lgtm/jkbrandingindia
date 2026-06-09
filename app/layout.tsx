@@ -4,12 +4,12 @@ import SplashCursor from "@/components/SplashCursor";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Brandingo India Pvt. Ltd. | Build Your Brand's Journey",
+  title: "Brandingo | Build Your Brand's Journey",
   description:
-    "Brandingo India Pvt. Ltd. – expert graphic design services: logo, stationery, banner & standee, packaging & label, menu, invitation card, tag, and brochure design.",
+    "Brandingo - expert graphic design services: logo, stationery, banner & standee, packaging & label, menu, invitation card, tag, and brochure design.",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body>
+      <body suppressHydrationWarning>
         <SplashCursor
           DENSITY_DISSIPATION={10}
           VELOCITY_DISSIPATION={2.5}

@@ -5,28 +5,71 @@ import Link from "next/link";
 import { ChevronRight, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Brandingo India Pvt. Ltd.",
-  description: "Read our privacy policy to understand how Brandingo India collects, uses, and safeguards your personal data.",
+  title: "Privacy Policy | Brandingo",
+  description:
+    "Read our privacy policy to understand how Brandingo collects, uses, and safeguards your personal data.",
 };
 
-const A = "#f58220"; // accent orange
+const A = "#f58220";
 
 export default function PrivacyPolicyPage() {
   return (
     <main style={{ background: "#ffffff" }}>
       <Navbar />
-
-      {/* ── HERO BANNER ──────────────────────────────────────────────── */}
-      <section style={{ position: "relative", height: "360px", display: "flex", alignItems: "flex-end", paddingBottom: "56px", overflow: "hidden" }}>
-        {/* Background Image / Pattern */}
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(11,60,93,0.85) 0%, rgba(245,130,32,0.85) 100%)" }} />
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+      <section
+        style={{
+          position: "relative",
+          height: "360px",
+          display: "flex",
+          alignItems: "flex-end",
+          paddingBottom: "56px",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(135deg, rgba(11,60,93,0.85) 0%, rgba(245,130,32,0.85) 100%)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
+        />
 
         <div className="site-wrap" style={{ position: "relative", zIndex: 10 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "5px 14px", background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.25)", color: "#fff", fontSize: "11px", fontWeight: 700, borderRadius: "999px", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "16px" }}>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "5px 14px",
+              background: "rgba(255,255,255,0.15)",
+              border: "1px solid rgba(255,255,255,0.25)",
+              color: "#fff",
+              fontSize: "11px",
+              fontWeight: 700,
+              borderRadius: "999px",
+              letterSpacing: "1px",
+              textTransform: "uppercase",
+              marginBottom: "16px",
+            }}
+          >
             <ShieldCheck size={12} style={{ color: A }} /> Legal & Compliance
           </div>
-          <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)", fontWeight: 900, color: "#fff", marginBottom: "12px" }}>
+          <h1
+            style={{
+              fontSize: "clamp(2rem, 4.5vw, 3rem)",
+              fontWeight: 900,
+              color: "#fff",
+              marginBottom: "12px",
+            }}
+          >
             Privacy Policy
           </h1>
           <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "14px", marginBottom: "20px" }}>
@@ -34,7 +77,11 @@ export default function PrivacyPolicyPage() {
           </p>
 
           <nav style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-            <Link href="/" style={{ color: "rgba(255,255,255,0.7)", fontSize: "13px", fontWeight: 500 }} className="hover:text-white transition-colors">
+            <Link
+              href="/"
+              style={{ color: "rgba(255,255,255,0.7)", fontSize: "13px", fontWeight: 500 }}
+              className="hover:text-white transition-colors"
+            >
               Home
             </Link>
             <ChevronRight size={13} style={{ color: "rgba(255,255,255,0.45)" }} />
@@ -43,16 +90,14 @@ export default function PrivacyPolicyPage() {
         </div>
       </section>
 
-      {/* ── LEGAL CONTENT ────────────────────────────────────────────── */}
       <section style={{ padding: "80px 0" }}>
         <div className="site-wrap" style={{ maxWidth: "800px", margin: "0 auto" }}>
-          
           <div style={{ marginBottom: "40px" }}>
             <h2 style={{ fontSize: "1.6rem", fontWeight: 800, color: "#1a1a1a", marginBottom: "16px" }}>
               1. Introduction
             </h2>
             <p style={{ color: "#444", fontSize: "15px", lineHeight: "1.8", marginBottom: "14px" }}>
-              Welcome to Brandingo (India) Private Limited. We are committed to protecting your personal data and respecting your privacy. This Privacy Policy describes how we collect, store, share, and protect your information when you visit our website, use our services, or contact us.
+              Welcome to Brandingo. We are committed to protecting your personal data and respecting your privacy. This Privacy Policy describes how we collect, store, share, and protect your information when you visit our website, use our services, or contact us.
             </p>
             <p style={{ color: "#444", fontSize: "15px", lineHeight: "1.8" }}>
               By accessing our website or using our services, you consent to the data practices described in this policy. If you do not agree with the terms outlined here, please discontinue use of our site and services.
@@ -78,7 +123,7 @@ export default function PrivacyPolicyPage() {
               3. How We Use Your Information
             </h2>
             <p style={{ color: "#444", fontSize: "15px", lineHeight: "1.8", marginBottom: "14px" }}>
-              Brandingo India uses your data for the following purposes:
+              Brandingo uses your data for the following purposes:
             </p>
             <ul style={{ paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "10px", color: "#444", fontSize: "15px", lineHeight: "1.7" }}>
               <li>To answer your requests, schedule consultation calls, and prepare custom project quotes.</li>
@@ -135,14 +180,13 @@ export default function PrivacyPolicyPage() {
               If you have any questions about this Privacy Policy, the practices of this site, or your dealings with our brand, please reach out to us at:
             </p>
             <div style={{ fontSize: "14px", color: "#333", display: "flex", flexDirection: "column", gap: "4px" }}>
-              <strong>Brandingo India Pvt. Ltd.</strong>
+              <strong>Brandingo</strong>
               <span>Office No. 1104, Wings Business Bay, Nr ITC Fortune Hotel,</span>
               <span>150 ft. Ring Road, Rajkot, Gujarat, India.</span>
-              <span>Email: <a href="mailto:info@brandingoindia.com" style={{ color: A, fontWeight: 600, textDecoration: "none" }}>info@brandingoindia.com</a></span>
-              <span>Phone: <a href="tel:+919104963161" style={{ color: A, fontWeight: 600, textDecoration: "none" }}>+91 91049 63161</a></span>
+              <span>Email: <a href="mailto:sales@brandingo.in" style={{ color: A, fontWeight: 600, textDecoration: "none" }}>sales@brandingo.in</a></span>
+              <span>Phone: <a href="tel:+919875084098" style={{ color: A, fontWeight: 600, textDecoration: "none" }}>+91 98750 84098</a></span>
             </div>
           </div>
-
         </div>
       </section>
 

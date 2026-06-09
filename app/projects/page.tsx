@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 /*
- * ── Projects page temporarily DISABLED ──────────────────────────────
+ * Projects page temporarily DISABLED
  * The Projects section was removed from the navbar, landing page and footer.
  * The implementation below is preserved so it can be re-enabled with minimal
  * work in future. To restore the page:
@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 import Portfolio from "@/components/Portfolio";
 
 export const metadata: Metadata = {
-  title: "Our Projects | Brandingo India Pvt. Ltd.",
+  title: "Our Projects | Brandingo",
   description: "Discover our portfolio of branding and graphic design projects across various industries.",
   alternates: {
     canonical: "https://jkbrandingindia.com/projects",
@@ -35,7 +35,6 @@ export default function ProjectsPage() {
 }
 */
 
-// Temporary stub: the /projects route returns 404 while disabled.
 export default function ProjectsPage() {
   notFound();
 }
