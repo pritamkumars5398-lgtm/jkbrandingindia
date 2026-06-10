@@ -14,7 +14,7 @@ const B = "/Stationary Design";
 
 // category → list of image paths (client's actual work samples)
 const groups: Record<string, string[]> = {
-  "Logo": [
+  "Created Brands": [
     `${B}/Logo/001.jpeg`,
     `${B}/Logo/002.jpeg`,
     `${B}/Logo/003.jpeg`,

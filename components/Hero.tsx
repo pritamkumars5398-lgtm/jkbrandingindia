@@ -373,9 +373,9 @@ export default function Hero() {
             {/* Stats row */}
             <div
               style={{ display: "grid", gap: "12px", maxWidth: "560px" }}
-              className="grid-cols-2 sm:grid-cols-4"
+              className="grid-cols-3"
             >
-              {[{ value: "40,000+", label: "Projects Completed" }, { value: "35,000+", label: "Happy Clients" }, { value: "10+", label: "Years Experience" }, { value: "50+", label: "Awards Won" }].map((s) => (
+              {[{ value: "40,000+", label: "Projects Completed" }, { value: "35,000+", label: "Happy Clients" }, { value: "10+", label: "Years Experience" }].map((s) => (
                 <div key={s.label} style={{ borderLeft: "2px solid #f58220", paddingLeft: "10px", minWidth: 0 }}>
                   <div style={{ fontSize: "clamp(1rem, 3vw, 1.55rem)", fontWeight: 800, color: "#1a1a1a", lineHeight: 1.1, whiteSpace: "nowrap" }}>{s.value}</div>
                   <div style={{ fontSize: "clamp(10px, 2vw, 11px)", color: "#888", marginTop: "3px", fontWeight: 500 }}>{s.label}</div>

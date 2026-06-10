@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { ServiceMeta } from "@/lib/services-data";
@@ -33,26 +33,6 @@ function ServiceHero({ service }: { service: ServiceMeta }) {
           <ChevronRight size={12} style={{ color: "rgba(255,255,255,0.4)" }} />
           <span style={{ color: "#fff", fontSize: "13px", fontWeight: 600 }}>{service.title}</span>
         </nav>
-      </div>
-    </section>
-  );
-}
-
-/* ── Shared CTA ───────────────────────────────────────────────────── */
-function ServiceCTA() {
-  return (
-    <section style={{ background: A, padding: "64px 0", position: "relative", overflow: "hidden" }}>
-      <div style={{ position: "absolute", inset: 0, backgroundImage: "repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(0,0,0,0.04) 30px,rgba(0,0,0,0.04) 31px)" }} />
-      <div className="site-wrap" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
-        <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 900, color: "#000", marginBottom: "12px" }}>
-          Ready to Get Started?
-        </h2>
-        <p style={{ color: "rgba(0,0,0,0.6)", fontSize: "16px", marginBottom: "28px", maxWidth: "480px", margin: "0 auto 28px" }}>
-          Let&apos;s discuss your project and create something extraordinary together.
-        </p>
-        <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "14px 36px", background: "#000", color: "#fff", fontWeight: 700, borderRadius: "999px", fontSize: "15px", transition: "background 0.2s" }} className="hover:bg-[#1a1a1a]">
-          Get a Free Quote <ArrowRight size={17} />
-        </Link>
       </div>
     </section>
   );
@@ -348,12 +328,252 @@ function DigitalMarketing() {
   );
 }
 
+/* ══════════════════════════════════════════════════════════════════
+   Design sub-services — each gets its own page, built from StandardLayout
+   and showcasing Brandingo's real work (images in /public/Stationary Design).
+══════════════════════════════════════════════════════════════════ */
+const SD = "/Stationary Design";
+
+const DESIGN_CONTENT: Record<string, StandardContent> = {
+  "logo-design": {
+    eyebrow: "Brand Identity",
+    heading: <>A logo your customers <span style={{ color: A }}>remember</span></>,
+    intro: [
+      "A professional, well-designed logo is the crucial first step in establishing your brand — it creates the first impression of your company and expresses its values, all in one mark.",
+      "At Brandingo we craft distinctive, versatile logos that work everywhere — from a tiny app icon to a giant hoarding — and come delivered in every format you'll ever need.",
+    ],
+    tags: ["Wordmark", "Lettermark", "Pictorial", "Abstract", "Mascot", "Combination"],
+    stats: [{ v: "1000+", l: "Logos Designed" }, { v: "5", l: "Concepts to Start" }, { v: "∞", l: "Revisions" }, { v: "AI/CDR", l: "Source Files" }],
+    offeringsTitle: <>Logos We&apos;ve <span style={{ color: A }}>Crafted</span></>,
+    offerings: [
+      { img: `${SD}/Logo/001.jpeg`, title: "Wordmark Logos", desc: "Clean, typography-led logos built around your brand name for instant recognition." },
+      { img: `${SD}/Logo/002.jpeg`, title: "Pictorial Marks", desc: "A memorable symbol or icon that captures your brand in a single image." },
+      { img: `${SD}/Logo/003.jpeg`, title: "Combination Marks", desc: "Symbol and name together — flexible identities that scale across every medium." },
+      { img: `${SD}/Logo/0010.jpeg`, title: "Abstract Marks", desc: "Unique geometric forms that express your brand's personality and values." },
+      { img: `${SD}/Logo/0011.jpeg`, title: "Mascot Logos", desc: "Characterful, friendly marks that give your brand a face people connect with." },
+      { img: `${SD}/Logo/0012.jpeg`, title: "Lettermark Logos", desc: "Sharp monogram logos built from your initials — simple, classic and timeless." },
+    ],
+    steps: [
+      { n: "01", title: "Discovery", desc: "We learn your brand, audience and goals through an in-depth brief." },
+      { n: "02", title: "Concept", desc: "We present 5 distinct logo directions for your review." },
+      { n: "03", title: "Refinement", desc: "We refine your chosen concept with unlimited revisions until it's perfect." },
+      { n: "04", title: "Delivery", desc: "Final files in every format — print-ready, web, AI and CDR source." },
+    ],
+  },
+  "stationery-design": {
+    eyebrow: "Corporate Identity",
+    heading: <>Stationery that sets the <span style={{ color: A }}>right tone</span></>,
+    intro: [
+      "Letterheads, envelopes, folders, business cards, invoices and more — well-executed stationery boosts your corporate identity and sets the tone from the very first touch.",
+      "We design cohesive stationery suites that carry your brand consistently across every printed interaction with clients and partners.",
+    ],
+    tags: ["Business Cards", "Letterheads", "Envelopes", "Folders", "Invoices", "Bill Books"],
+    stats: [{ v: "500+", l: "Suites Designed" }, { v: "100%", l: "Print-Ready" }, { v: "CMYK", l: "Colour Accurate" }, { v: "48h", l: "Avg First Draft" }],
+    offeringsTitle: <>What We <span style={{ color: A }}>Design</span></>,
+    offerings: [
+      { img: `${SD}/Stationary Design/001.jpeg`, title: "Business Cards", desc: "Memorable, premium cards that make your first handshake count." },
+      { img: `${SD}/Stationary Design/002.jpeg`, title: "Letterheads", desc: "Professional letterheads that bring authority to every communication." },
+      { img: `${SD}/Stationary Design/004.jpeg`, title: "Envelopes & Folders", desc: "Branded envelopes and folders for a consistent, polished presentation." },
+      { img: `${SD}/Stationary Design/005.jpeg`, title: "Invoices & Bill Books", desc: "Clean, on-brand billing documents that look as good as they function." },
+      { img: `${SD}/Stationary Design/006.jpeg`, title: "Corporate Suites", desc: "Complete stationery sets that keep your identity consistent everywhere." },
+      { img: `${SD}/Stationary Design/007.jpeg`, title: "Custom Print Items", desc: "Notepads, certificates and more — fully matched to your brand system." },
+    ],
+    steps: [
+      { n: "01", title: "Brand Review", desc: "We align the stationery with your existing logo and brand guidelines." },
+      { n: "02", title: "Design", desc: "We design each piece as a cohesive, professional suite." },
+      { n: "03", title: "Refine", desc: "We perfect spacing, colour and layout with your feedback." },
+      { n: "04", title: "Print-Ready", desc: "Delivered in CMYK, print-ready files with bleed and crop marks." },
+    ],
+  },
+  "banner-standee-design": {
+    eyebrow: "Display & Signage",
+    heading: <>Displays that <span style={{ color: A }}>command attention</span></>,
+    intro: [
+      "Banners and standees are one of the most popular ways to market today. Portable stands — fixed, X-style, expandable or retractable — work in any size for any placement and visibility.",
+      "We design bold, legible, high-impact display graphics that read clearly from across the room and pull your audience in at events, stores and exhibitions.",
+    ],
+    tags: ["Roll-up Standees", "X-Banners", "Flex Banners", "Backdrops", "Exhibition", "Hoardings"],
+    stats: [{ v: "800+", l: "Banners Made" }, { v: "Any", l: "Size & Format" }, { v: "HD", l: "Print Quality" }, { v: "24h", l: "Fast Turnaround" }],
+    offeringsTitle: <>Display Formats We <span style={{ color: A }}>Cover</span></>,
+    offerings: [
+      { img: `${SD}/banner design/Banner1.jpeg`, title: "Roll-up Standees", desc: "Portable retractable standees perfect for events, receptions and stores." },
+      { img: `${SD}/banner design/Banner2.jpeg`, title: "X-Style Banners", desc: "Lightweight, easy-to-set-up X-banners for high-visibility placements." },
+      { img: `${SD}/banner design/Banner3.jpeg`, title: "Flex Banners", desc: "Large-format flex prints for shopfronts, stages and outdoor promotion." },
+      { img: `${SD}/banner design/Banner5.jpeg`, title: "Event Backdrops", desc: "Eye-catching backdrops and step-and-repeats that brand any space." },
+      { img: `${SD}/banner design/Banner7.jpg`, title: "Exhibition Graphics", desc: "Booth and stall graphics designed to stand out on a crowded floor." },
+      { img: `${SD}/banner design/Banner8.jpg`, title: "Hoardings", desc: "Bold outdoor hoarding designs built for impact at a distance." },
+    ],
+    steps: [
+      { n: "01", title: "Brief", desc: "We capture the message, size and where the display will live." },
+      { n: "02", title: "Design", desc: "We craft a bold, legible layout that works at a glance." },
+      { n: "03", title: "Refine", desc: "We fine-tune the hierarchy and visuals with your feedback." },
+      { n: "04", title: "Print-Ready", desc: "High-resolution files prepared exactly to your print specs." },
+    ],
+  },
+  "packaging-label-design": {
+    eyebrow: "Product Branding",
+    heading: <>Packaging that <span style={{ color: A }}>wins the shelf</span></>,
+    intro: [
+      "Packaging is the exterior wrap of your product and your first physical interaction with the public — packaging and labels that convey your brand's identity, quality and reputation.",
+      "We design appetising, compliant, shelf-ready packaging and labels that stand out next to the competition and make customers reach for your product.",
+    ],
+    tags: ["Product Boxes", "Labels", "Pouches", "Bottles", "Food Packaging", "Compliance"],
+    stats: [{ v: "300+", l: "Products Branded" }, { v: "FSSAI", l: "Compliant Layouts" }, { v: "Dieline", l: "Print-Ready" }, { v: "3D", l: "Mockups" }],
+    offeringsTitle: <>What We <span style={{ color: A }}>Package</span></>,
+    offerings: [
+      { img: `${SD}/packaging/10.jpeg`, title: "Product Boxes", desc: "Structural, eye-catching box designs built around your product and dieline." },
+      { img: `${SD}/packaging/11.jpg`, title: "Labels & Stickers", desc: "Crisp, compliant labels that communicate quality at a glance." },
+      { img: `${SD}/packaging/13.jpeg`, title: "Pouches & Wrappers", desc: "Flexible packaging designs optimised for snacks, spices and more." },
+      { img: `${SD}/packaging/16.jpeg`, title: "Bottle & Jar Labels", desc: "Wrap-around labels designed to fit and flatter your containers." },
+      { img: `${SD}/packaging/18.jpeg`, title: "Food Packaging", desc: "Appetising, FSSAI-compliant layouts for the food and beverage shelf." },
+      { img: `${SD}/packaging/00e4f642-160b-48db-a900-9f6e46defb31.jpg`, title: "Retail Packaging", desc: "Premium retail packaging systems that build brand recall and trust." },
+    ],
+    steps: [
+      { n: "01", title: "Discovery", desc: "We study your product, audience and the shelf it competes on." },
+      { n: "02", title: "Concept", desc: "We design standout, on-brand packaging concepts." },
+      { n: "03", title: "Compliance", desc: "We add all regulatory and nutritional information cleanly." },
+      { n: "04", title: "Dieline", desc: "Print-ready artwork delivered on accurate dielines with mockups." },
+    ],
+  },
+  "menu-design": {
+    eyebrow: "Hospitality",
+    heading: <>Menus that <span style={{ color: A }}>sell</span>, not just list</>,
+    intro: [
+      "Menus that express your eatery's personality, help customers understand your concept and promote profitability — a key part of any restaurant's marketing plan.",
+      "We design beautiful, easy-to-read menus that guide diners toward your best dishes and reflect the experience your brand promises.",
+    ],
+    tags: ["Dine-in Menus", "Takeaway Menus", "Café Boards", "Digital Menus", "QR Menus", "Bar Menus"],
+    stats: [{ v: "200+", l: "Menus Designed" }, { v: "Print+QR", l: "Formats" }, { v: "Appetising", l: "Food Styling" }, { v: "Fast", l: "Turnaround" }],
+    offeringsTitle: <>Menus We <span style={{ color: A }}>Design</span></>,
+    offerings: [
+      { img: `${SD}/menu/006.jpeg`, title: "Dine-in Menus", desc: "Elegant, well-structured menus that elevate the dining experience." },
+      { img: `${SD}/menu/007.jpeg`, title: "Café & Bar Menus", desc: "Characterful menus that match the vibe of your café or bar." },
+      { img: `${SD}/menu/008.jpeg`, title: "Takeaway Menus", desc: "Clear, compact menus designed for delivery and takeaway orders." },
+      { img: `${SD}/menu/009.jpeg`, title: "Menu Boards", desc: "High-visibility wall and counter boards for quick-service outlets." },
+      { img: `${SD}/menu/5.jpeg`, title: "QR / Digital Menus", desc: "Mobile-friendly digital menus accessible via a simple scan." },
+      { img: `${SD}/menu/22abc10e-7fe9-47e9-afde-66b23649dca5.jpg`, title: "Specials & Inserts", desc: "Seasonal specials and insert cards that drive higher-margin sales." },
+    ],
+    steps: [
+      { n: "01", title: "Concept", desc: "We capture your cuisine, pricing strategy and brand personality." },
+      { n: "02", title: "Layout", desc: "We structure the menu to highlight your most profitable dishes." },
+      { n: "03", title: "Design", desc: "We add styling, imagery and polish that whets the appetite." },
+      { n: "04", title: "Delivery", desc: "Print-ready and digital/QR-ready versions delivered together." },
+    ],
+  },
+  "invitation-card-design": {
+    eyebrow: "Events & Celebrations",
+    heading: <>Invitations that set the <span style={{ color: A }}>tone</span></>,
+    intro: [
+      "Beautifully crafted invitation cards for weddings, events and celebrations — designed to set the tone and make a memorable first impression.",
+      "From traditional to contemporary, we design invitations that feel personal, premium and perfectly matched to your occasion.",
+    ],
+    tags: ["Wedding", "Corporate", "Birthday", "Religious", "Digital", "E-Invites"],
+    stats: [{ v: "400+", l: "Invites Designed" }, { v: "Print+Digital", l: "Formats" }, { v: "Premium", l: "Finishes" }, { v: "Custom", l: "Every Time" }],
+    offeringsTitle: <>Invitations We <span style={{ color: A }}>Create</span></>,
+    offerings: [
+      { img: `${SD}/invtations/00b00e3b-0acd-4b3b-9af0-8c57be93ebbd.jpg`, title: "Wedding Invitations", desc: "Elegant, personal wedding suites that set the mood for the big day." },
+      { img: `${SD}/invtations/06dd1cb4-20a9-4955-9c64-12960fb781cb.jpg`, title: "Corporate Invites", desc: "Polished invitations for launches, conferences and company events." },
+      { img: `${SD}/invtations/17476ecc-0f75-4d03-b125-48839fee5cdc.jpg`, title: "Birthday & Party", desc: "Fun, vibrant cards that bring the energy of your celebration." },
+      { img: `${SD}/invtations/1d1e40ae-ce91-4086-90a5-5b8b28b879e4.jpg`, title: "Religious Ceremonies", desc: "Thoughtful designs for poojas, housewarmings and traditional events." },
+      { img: `${SD}/invtations/310ac3d1-96fa-479e-b791-74443b2e993d.jpg`, title: "Digital E-Invites", desc: "Shareable digital invitations ready for WhatsApp and social media." },
+      { img: `${SD}/invtations/433087ee-31fc-4d76-8d10-a572809406a6.jpg`, title: "Premium Cards", desc: "Foil, emboss and special-finish cards for an unforgettable feel." },
+    ],
+    steps: [
+      { n: "01", title: "Brief", desc: "We learn about your event, theme and personal preferences." },
+      { n: "02", title: "Design", desc: "We craft a bespoke invitation concept around your occasion." },
+      { n: "03", title: "Refine", desc: "We perfect the wording, colours and details with you." },
+      { n: "04", title: "Delivery", desc: "Print-ready files plus a digital version to share online." },
+    ],
+  },
+  "tag-design": {
+    eyebrow: "Retail Details",
+    heading: <>Tags that add a <span style={{ color: A }}>premium touch</span></>,
+    intro: [
+      "Custom tags that carry your brand — from price and care tags to gift and product tags — designed for clarity, character and a premium feel.",
+      "The smallest details often leave the biggest impression. We design tags that complete your product's look and reinforce your brand at the point of purchase.",
+    ],
+    tags: ["Price Tags", "Care Labels", "Gift Tags", "Product Tags", "Hang Tags", "Swing Tags"],
+    stats: [{ v: "Premium", l: "Finishes" }, { v: "Brand-Matched", l: "Every Tag" }, { v: "Die-cut", l: "Shapes" }, { v: "Print-Ready", l: "Files" }],
+    offeringsTitle: <>Tags We <span style={{ color: A }}>Design</span></>,
+    offerings: [
+      { img: `${SD}/tag design/a05665c2-b65d-4329-8476-5212f02a5f1b.jpg`, title: "Product & Hang Tags", desc: "Branded swing tags that give apparel and products a premium finish." },
+      { img: `${SD}/tag design/cf1415eb-6277-4e47-a503-e1c074aad145.jpg`, title: "Price & Care Tags", desc: "Clear, on-brand price and care tags that inform without clutter." },
+      { img: `${SD}/tag design/WhatsApp Image 2026-04-09 at 12.03.20.jpeg`, title: "Gift & Custom Tags", desc: "Distinctive gift and custom-shaped tags for a thoughtful touch." },
+    ],
+    steps: [
+      { n: "01", title: "Brief", desc: "We learn your product, materials and where the tag will live." },
+      { n: "02", title: "Design", desc: "We design tags that match your brand and product perfectly." },
+      { n: "03", title: "Refine", desc: "We adjust shape, size and finish with your feedback." },
+      { n: "04", title: "Delivery", desc: "Die-cut, print-ready artwork delivered in every format." },
+    ],
+  },
+  "brochure-design": {
+    eyebrow: "Print Marketing",
+    heading: <>Brochures that tell your <span style={{ color: A }}>story</span></>,
+    intro: [
+      "Brochures extend your customers' knowledge of your business — introducing your company and giving a snapshot of your products, services, features and contact information.",
+      "We design clear, persuasive brochures and company profiles that guide the reader through your offering and leave a lasting, professional impression.",
+    ],
+    tags: ["Bi-fold", "Tri-fold", "Company Profile", "Catalogues", "Flyers", "Booklets"],
+    stats: [{ v: "600+", l: "Brochures Designed" }, { v: "Any", l: "Fold & Format" }, { v: "Print-Ready", l: "Artwork" }, { v: "Copy+Design", l: "Support" }],
+    offeringsTitle: <>Print Pieces We <span style={{ color: A }}>Produce</span></>,
+    offerings: [
+      { img: `${SD}/Brouchers & File/001.jpg`, title: "Bi-fold Brochures", desc: "Clean two-panel brochures perfect for a focused, single message." },
+      { img: `${SD}/Brouchers & File/002.jpeg`, title: "Tri-fold Brochures", desc: "Classic three-panel brochures that organise your offering neatly." },
+      { img: `${SD}/Brouchers & File/003.jpeg`, title: "Company Profiles", desc: "Premium profile booklets that present your business with authority." },
+      { img: `${SD}/Brouchers & File/0011.jpeg`, title: "Product Catalogues", desc: "Multi-page catalogues that showcase your full range beautifully." },
+      { img: `${SD}/Brouchers & File/0013.jpg`, title: "Flyers & Leaflets", desc: "Single-page promos designed to grab attention and drive action." },
+      { img: `${SD}/Brouchers & File/0014.jpeg`, title: "Booklets & Folders", desc: "Bound booklets and presentation folders for a complete pitch." },
+    ],
+    steps: [
+      { n: "01", title: "Content", desc: "We organise your message, sections and key selling points." },
+      { n: "02", title: "Layout", desc: "We structure a clear reading flow across every panel or page." },
+      { n: "03", title: "Design", desc: "We add imagery, colour and polish that reflects your brand." },
+      { n: "04", title: "Print-Ready", desc: "Delivered with correct folds, bleed and crop marks for printing." },
+    ],
+  },
+  "bag-design": {
+    eyebrow: "Brand on the Move",
+    heading: <>Bags that carry your <span style={{ color: A }}>brand everywhere</span></>,
+    intro: [
+      "Custom-designed bags that carry your brand wherever your customers go — a walking advertisement that keeps your identity visible long after the sale.",
+      "From paper carry bags to cloth and premium retail bags, we design pieces that look great, feel premium and turn every customer into a brand ambassador.",
+    ],
+    tags: ["Paper Bags", "Carry Bags", "Cloth Bags", "Gift Bags", "Retail Bags", "Eco-Friendly"],
+    stats: [{ v: "Custom", l: "Every Design" }, { v: "Premium", l: "Materials" }, { v: "Dieline", l: "Print-Ready" }, { v: "Eco", l: "Options" }],
+    offeringsTitle: <>Bags We <span style={{ color: A }}>Design</span></>,
+    offerings: [
+      { img: `${SD}/Bag Design/0b62f83c-13c9-4788-8ae8-9ef59b9258a9.jpg`, title: "Paper Carry Bags", desc: "Branded paper bags that give every purchase a premium send-off." },
+      { img: `${SD}/Bag Design/1d6d067c-920a-4729-bd44-f38e1b29370b.jpg`, title: "Retail Shopping Bags", desc: "Eye-catching retail bags that keep your brand on the street." },
+      { img: `${SD}/Bag Design/2f385020-020d-49a7-88f5-7d63b11b91d0.jpg`, title: "Cloth & Tote Bags", desc: "Reusable cloth totes that pair sustainability with brand visibility." },
+      { img: `${SD}/Bag Design/44cb8c43-f272-4e86-ab6a-6b6f000e4991.jpg`, title: "Gift Bags", desc: "Special-occasion gift bags designed for a memorable unboxing." },
+      { img: `${SD}/Bag Design/4594d9ad-7ee4-4135-8cc3-4beb1a314009.jpg`, title: "Premium Bags", desc: "Luxe finishes and structures for high-end retail experiences." },
+      { img: `${SD}/Bag Design/7d397ec4-01c4-416e-9a8a-8c96da387090.jpg`, title: "Eco-Friendly Bags", desc: "Sustainable, recyclable bag designs that customers feel good carrying." },
+    ],
+    steps: [
+      { n: "01", title: "Brief", desc: "We learn your brand, materials and how the bag will be used." },
+      { n: "02", title: "Design", desc: "We design a bag that's on-brand, practical and premium." },
+      { n: "03", title: "Refine", desc: "We adjust size, handles and finish with your feedback." },
+      { n: "04", title: "Dieline", desc: "Accurate, print-ready dielines delivered with mockups." },
+    ],
+  },
+};
+
 /* ── Route → Layout map ───────────────────────────────────────── */
 const LAYOUTS: Record<string, React.FC> = {
   "graphic-designing":           GraphicDesigning,
   "website-development":         WebsiteDevelopment,
   "search-engine-optimization": SearchEngineOptimization,
   "digital-marketing":           DigitalMarketing,
+  // Each design sub-service renders the shared StandardLayout with its own content.
+  ...Object.fromEntries(
+    Object.entries(DESIGN_CONTENT).map(([slug, content]) => [
+      slug,
+      function DesignServiceLayout() {
+        return <StandardLayout {...content} />;
+      },
+    ])
+  ),
 };
 
 /* ── Page shell ───────────────────────────────────────────────── */
@@ -364,7 +584,6 @@ export default function ServicePageClient({ service }: { service: ServiceMeta })
       <Navbar />
       <ServiceHero service={service} />
       {Layout ? <Layout /> : null}
-      <ServiceCTA />
       <Footer />
     </>
   );

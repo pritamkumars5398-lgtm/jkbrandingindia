@@ -7,13 +7,13 @@ import { ArrowRight } from "lucide-react";
 
 // A 6-item highlight of our design services (full list lives on /services).
 const services = [
-  { img: "/Stationary Design/Logo/00001.jpeg", title: "Logo Design", href: "/services/graphic-designing", description: "A professional logo is the first step in establishing your brand — a memorable first impression that captures your company's values." },
-  { img: "/Stationary Design/Stationary Design/001.jpeg", title: "Stationery Design", href: "/services/graphic-designing", description: "Letterheads, business cards, envelopes and more — cohesive stationery that strengthens your corporate identity." },
-  { img: "/Stationary Design/banner design/Banner1.jpeg", title: "Banner & Standee Design", href: "/services/graphic-designing", description: "Portable, high-impact stands — fixed, X-style, expandable or retractable — that work at any size for any placement." },
-  { img: "/Stationary Design/packaging/10.jpeg", title: "Packaging & Label Design", href: "/services/graphic-designing", description: "Standout packaging and labels — your first physical touchpoint — that convey your brand's identity and quality." },
-  { img: "/Stationary Design/menu/006.jpeg", title: "Menu Design", href: "/services/graphic-designing", description: "Menus that express your eatery's personality, help customers grasp your concept and drive profitability." },
-  { img: "/Stationary Design/Brouchers & File/001.jpg", title: "Brochure Design", href: "/services/graphic-designing", description: "Introduce your company and showcase your products, services and key features in a beautifully designed brochure." },
-  { img: "/Stationary Design/Bag Design/7d397ec4-01c4-416e-9a8a-8c96da387090.jpg", title: "Bag Design", href: "/services/graphic-designing", description: "Custom-designed bags that carry your brand wherever your customers go — a walking advertisement for your business." },
+  { img: "/Stationary Design/Logo/00001.jpeg", title: "Logo Design", href: "/services/logo-design", description: "A professional logo is the first step in establishing your brand — a memorable first impression that captures your company's values." },
+  { img: "/Stationary Design/Stationary Design/001.jpeg", title: "Stationery Design", href: "/services/stationery-design", description: "Letterheads, business cards, envelopes and more — cohesive stationery that strengthens your corporate identity." },
+  { img: "/Stationary Design/banner design/Banner1.jpeg", title: "Banner & Standee Design", href: "/services/banner-standee-design", description: "Portable, high-impact stands — fixed, X-style, expandable or retractable — that work at any size for any placement." },
+  { img: "/Stationary Design/packaging/10.jpeg", title: "Packaging & Label Design", href: "/services/packaging-label-design", description: "Standout packaging and labels — your first physical touchpoint — that convey your brand's identity and quality." },
+  { img: "/Stationary Design/menu/006.jpeg", title: "Menu Design", href: "/services/menu-design", description: "Menus that express your eatery's personality, help customers grasp your concept and drive profitability." },
+  { img: "/Stationary Design/Brouchers & File/001.jpg", title: "Brochure Design", href: "/services/brochure-design", description: "Introduce your company and showcase your products, services and key features in a beautifully designed brochure." },
+  { img: "/Stationary Design/Bag Design/7d397ec4-01c4-416e-9a8a-8c96da387090.jpg", title: "Bag Design", href: "/services/bag-design", description: "Custom-designed bags that carry your brand wherever your customers go — a walking advertisement for your business." },
 ];
 
 // Each card flies in from a different spot, then settles into the grid.

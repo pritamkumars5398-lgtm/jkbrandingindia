@@ -6,16 +6,17 @@ import Link from "next/link";
 const plans = ["Basic Bliss Package", "Premium Prestige Package", "Ultimate Elegance Package"];
 
 const rows: { label: string; values: string[]; price?: boolean }[] = [
-  { label: "USD", values: ["$49.99", "$69.99", "$99.99"], price: true },
-  { label: "Logo Design Samples/Concept", values: ["3", "5", "4"] },
-  { label: "Design Revisions/Changes Option in the Sample", values: ["3", "5", "4"] },
+  { label: "INR", values: ["₹1,999", "₹4,999", "₹9,999"], price: true },
+  { label: "Logo Design Samples/Concept", values: ["5", "5", "5"] },
+  { label: "Design Revisions/Changes Option in the Sample", values: ["Unlimited", "Unlimited", "Unlimited"] },
   { label: "Designers Working on Your Project", values: ["1", "2", "2"] },
   { label: "Mode of Communication", values: ["Whatsapp / Messenger", "Whatsapp / Messenger", "Whatsapp / Messenger"] },
   { label: "Logo Design Duration", values: ["3-4 working days", "5-7 working days", "5-7 working days"] },
   { label: "Logo Design Sample Format", values: ["JPG", "JPG", "JPG"] },
   { label: "Logo Source File", values: ["CDR, PDF, PNG, JPG, AI", "CDR, PDF, PNG, JPG, AI", "CDR, PDF, PNG, JPG, AI"] },
   { label: "Free Logo Animation Video", values: ["2", "3", "5"] },
-  { label: "Stationery design (Business card, letterhead & Envelope) (2 sample of each)", values: ["No", "No", "Yes"] },
+  { label: "Stationery design (Business card, letterhead & Envelope) (2 sample of each)", values: ["No", "Yes", "Yes"] },
+  { label: "Festival Post", values: ["No", "No", "100 QTY"] },
   { label: "Payment Options - 100% Advance", values: ["Yes", "Yes", "Yes"] },
 ];
 

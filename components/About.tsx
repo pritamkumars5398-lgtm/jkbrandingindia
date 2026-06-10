@@ -11,7 +11,7 @@ const highlights = [
   "Strategic & Result-Driven: We don't just design logos; we build legal, trademark-ready brand identities that drive business growth.",
 ];
 
-export default function About() {
+export default function About({ showValues = true }: { showValues?: boolean }) {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
@@ -156,6 +156,7 @@ export default function About() {
         </div>
       </div>
 
+      {showValues && (
       <div className="site-wrap" style={{ marginTop: "100px" }}>
         <div
           style={{
@@ -282,6 +283,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      )}
     </section>
   );
 }

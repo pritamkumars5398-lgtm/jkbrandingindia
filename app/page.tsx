@@ -6,7 +6,6 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Pricing from "@/components/Pricing";
-import Vision from "@/components/Vision";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -19,11 +18,10 @@ export default function Home() {
       <Hero />
       <ClientLogos />
       <Stats />
-      <About />
+      <About showValues={false} />
       <Services />
       <WhyChooseUs />
       <Pricing />
-      <Vision />
       <Testimonials />
       <FAQ />
       <Contact />

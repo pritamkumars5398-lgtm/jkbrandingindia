@@ -2,13 +2,12 @@
 
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
-import { Briefcase, Users, Clock, Trophy } from "lucide-react";
+import { Briefcase, Users, Clock } from "lucide-react";
 
 const stats = [
   { icon: Clock, value: 10, suffix: "+", label: "Years of Experience" },
   { icon: Briefcase, value: 40000, suffix: "+", label: "Projects Completed" },
-  { icon: Users, value: 35000, suffix: "+", label: "Happy Clients" },
-  { icon: Trophy, value: 50, suffix: "+", label: "Awards Won" },
+  { icon: Users, value: 35000, suffix: "+", label: "Happy Clients" }
 ];
 
 export default function Stats() {
@@ -23,7 +22,7 @@ export default function Stats() {
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "3px", background: "linear-gradient(90deg, transparent, #f58220, transparent)" }} />
 
       <div className="site-wrap">
-        <div style={{ display: "grid", gap: "14px" }} className="grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
+        <div style={{ display: "grid", gap: "14px" }} className="grid-cols-1 sm:grid-cols-3">
           {stats.map((stat, i) => (
             <div
               key={stat.label}

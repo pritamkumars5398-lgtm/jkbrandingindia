@@ -144,8 +144,8 @@ export default function Footer() {
                   </span>
                 </li>
                 <li>
-                  <a href="tel:+91 98750 84098" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.4)", fontSize: "13px", transition: "color 0.2s" }} className="hover:text-[#f58220]">
-                    <Phone size={14} style={{ color: "#f58220" }} /> +91 98750 84098
+                  <a href="tel:+91 99799 92804" style={{ display: "flex", alignItems: "center", gap: "10px", color: "rgba(255,255,255,0.4)", fontSize: "13px", transition: "color 0.2s" }} className="hover:text-[#f58220]">
+                    <Phone size={14} style={{ color: "#f58220" }} /> +91 99799 92804
                   </a>
                 </li>
                 <li>

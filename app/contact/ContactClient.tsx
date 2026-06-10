@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Send, ChevronRight } from "lucide-react";
 
 const branches = [
-  { label: "Head Office", city: "Ahmedabad", address: "607, Iconic Shyamal, Shyamal Cross Roads, 132 Feet Ring Rd, Shyamal, Ahmedabad, Gujarat 380015", phone: "+91 98750 84098" },
+  { label: "Head Office", city: "Ahmedabad", address: "607, Iconic Shyamal, Shyamal Cross Roads, 132 Feet Ring Rd, Shyamal, Ahmedabad, Gujarat 380015", phone: "+91 99799 92804" },
   { label: "Banglore Branch", city: "Bengaluru", address: "Shanti Apartments, Behind Indian Bike Showroom, Bhaskaran Rd,  Bengaluru, Karnataka 560042" },
 ];
 
@@ -49,7 +49,7 @@ export default function ContactClient() {
       <section style={{ background: "#f8f9fb", padding: "72px 0" }}>
         <div className="site-wrap">
           <div style={{ display: "grid", gap: "20px", marginBottom: "20px" }} className="sm:grid-cols-2">
-            {[{ icon: Phone, label: "Phone", value: "+91 98750 84098", href: "tel:+919875084098" }, { icon: Mail, label: "Email", value: "sales@brandingo.in", href: "mailto:sales@brandingo.in" }].map(({ icon: Icon, label, value, href }) => (
+            {[{ icon: Phone, label: "Phone", value: "+91 99799 92804", href: "tel:+919979992804" }, { icon: Mail, label: "Email", value: "[EMAIL_ADDRESS]", href: "mailto:[EMAIL_ADDRESS]" }].map(({ icon: Icon, label, value, href }) => (
               <a key={label} href={href} style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px", padding: "36px 24px", background: "#fff", border: "1px solid rgba(0,0,0,0.07)", textDecoration: "none", transition: "border-color 0.2s", textAlign: "center" }} className="hover:border-[#f58220]/50 card-hover">
                 <div style={{ width: "52px", height: "52px", borderRadius: "50%", background: "#fff5eb", display: "flex", alignItems: "center", justifyContent: "center" }}><Icon size={22} style={{ color: "#f58220" }} /></div>
                 <div>
@@ -65,7 +65,6 @@ export default function ContactClient() {
                 <div style={{ width: "52px", height: "52px", borderRadius: "50%", background: "#fff5eb", display: "flex", alignItems: "center", justifyContent: "center" }}><MapPin size={22} style={{ color: "#f58220" }} /></div>
                 <p style={{ fontWeight: 800, color: "#1a1a1a", fontSize: "15px" }}>{b.label}</p>
                 <p style={{ color: "#777", fontSize: "13px", lineHeight: 1.7 }}>{b.address}</p>
-                <p style={{ color: "#f58220", fontWeight: 700, fontSize: "13px" }}>Contact No : {b.phone}</p>
               </div>
             ))}
           </div>

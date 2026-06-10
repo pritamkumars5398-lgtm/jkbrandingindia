@@ -108,11 +108,11 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+91 98750 84098"
+              href="tel:+91 99799 92804"
               style={{ fontSize: "13px", fontWeight: 600, color: phoneColor, transition: "color 0.3s" }}
               className="hover:text-[#f58220]"
             >
-              +91 98750 84098
+              +91 99799 92804
             </a>
             <Link
               href="/contact"
